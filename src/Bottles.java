@@ -2,26 +2,26 @@ import java.util.ArrayList;
 
 public class Bottles {
 
-    public String verse(int verse)
+    public String verse(int bottle)
     {
         String song ="";
 
-        song = verse + " bottles of beer on the wall, "+ verse +" bottles of beer.\n" +
-            "Take one down and pass it around, "+ (verse - 1) +" bottles of beer on the wall.\n";
+        song = bottle + " bottles of beer on the wall, "+ bottle +" bottles of beer.\n" +
+            "Take one down and pass it around, "+ (bottle - 1) +" bottles of beer on the wall.\n";
 
-        if (verse == 2)
+        if (bottle == 2)
         {
-            song = verse + " bottles of beer on the wall, "+ verse +" bottles of beer.\n" +
-            "Take one down and pass it around, "+ (verse - 1) +" bottle of beer on the wall.\n";
+            song = bottle + " bottles of beer on the wall, "+ bottle +" bottles of beer.\n" +
+            "Take one down and pass it around, "+ (bottle - 1) +" bottle of beer on the wall.\n";
         }
 
-        if (verse == 1) 
+        if (bottle == 1) 
         {
-            song = verse + " bottle of beer on the wall, "+ verse +" bottle of beer.\n" +
+            song = bottle + " bottle of beer on the wall, "+ bottle +" bottle of beer.\n" +
             "Take it down and pass it around, no more bottles of beer on the wall.\n";
         }
 
-        if (verse == 0) {
+        if (bottle == 0) {
             song = "No more bottles of beer on the wall, no more bottles of beer.\n"  +
             "Go to the store and buy some more, 99 bottles of beer on the wall.\n";
         }
