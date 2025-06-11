@@ -55,7 +55,8 @@ public class Bottles {
             }
             else if (i == 0) {
                 song = "No more bottles of beer on the wall, no more bottles of beer.\n"  +
-                "Go to the store and buy some more, 99 bottles of beer on the wall.\n";
+                "Go to the store and buy some more, 99 bottles of beer on the wall.\n" +
+                "\n";
             }
             else{
                 song = currentBottles + " bottles of beer on the wall, " + currentBottles + " bottles of beer.\n" +
@@ -75,46 +76,7 @@ public class Bottles {
 
     public String wholeSong()
     {
-        String song ="test";
-        
-        ArrayList<String> songs = new ArrayList<String>();
-
-        int bottles = 99;
-        int currentBottles = 0;
-
-        while (bottles >= 0) {
-
-            currentBottles = bottles;
-
-             if (bottles == 2) {
-                song = currentBottles + " bottles of beer on the wall, " + currentBottles +" bottles of beer.\n" +
-                "Take one down and pass it around, "+ (currentBottles - 1) +" bottle of beer on the wall.\n" + 
-                "\n";
-            }
-            else if (bottles == 1) {
-                song = currentBottles + " bottle of beer on the wall, "+ currentBottles +" bottle of beer.\n" +
-                "Take it down and pass it around, no more bottles of beer on the wall.\n" +
-                "\n";
-            }
-            else if (bottles == 0) {
-                song = "No more bottles of beer on the wall, no more bottles of beer.\n"  +
-                "Go to the store and buy some more, 99 bottles of beer on the wall.\n" + 
-                "\n";
-            }
-            else{
-                song = currentBottles + " bottles of beer on the wall, " + currentBottles + " bottles of beer.\n" +
-                "Take one down and pass it around, " + (currentBottles - 1) + " bottles of beer on the wall.\n" + 
-                "\n";
-            }
-
-            songs.add(song);
-            bottles--;
-
-        }
-
-        String songText = String.join("", songs);
-
-        return songText;
+        return verses(99, 0);
     }
 
 }
