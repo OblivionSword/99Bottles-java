@@ -41,13 +41,10 @@ public class Bottles {
 
         int bottles = start;
 
-        int currentBottles = 0;
 
         for(int i = start; i > end - 1; i--)
         {
-            currentBottles = bottles;
-
-            song = verse(currentBottles);
+            song = verse(bottles);
            
             songs.add(song);
 
