@@ -7,23 +7,27 @@ public class Bottles {
         String song ="";
 
         song = bottle + " bottles of beer on the wall, "+ bottle +" bottles of beer.\n" +
-            "Take one down and pass it around, "+ (bottle - 1) +" bottles of beer on the wall.\n";
+            "Take one down and pass it around, "+ (bottle - 1) +" bottles of beer on the wall.\n"+
+            "\n";
 
         if (bottle == 2)
         {
             song = bottle + " bottles of beer on the wall, "+ bottle +" bottles of beer.\n" +
-            "Take one down and pass it around, "+ (bottle - 1) +" bottle of beer on the wall.\n";
+            "Take one down and pass it around, "+ (bottle - 1) +" bottle of beer on the wall.\n"+
+            "\n";
         }
 
         if (bottle == 1) 
         {
             song = bottle + " bottle of beer on the wall, "+ bottle +" bottle of beer.\n" +
-            "Take it down and pass it around, no more bottles of beer on the wall.\n";
+            "Take it down and pass it around, no more bottles of beer on the wall.\n"+
+            "\n";
         }
 
         if (bottle == 0) {
             song = "No more bottles of beer on the wall, no more bottles of beer.\n"  +
-            "Go to the store and buy some more, 99 bottles of beer on the wall.\n";
+            "Go to the store and buy some more, 99 bottles of beer on the wall.\n"+
+            "\n";
         }
 
         return song;
@@ -43,27 +47,8 @@ public class Bottles {
         {
             currentBottles = bottles;
 
-            if (i == 2) {
-                song = currentBottles + " bottles of beer on the wall, " + currentBottles +" bottles of beer.\n" +
-                "Take one down and pass it around, "+ (currentBottles - 1) +" bottle of beer on the wall.\n" + 
-                "\n";
-            }
-            else if (i == 1) {
-                song = currentBottles + " bottle of beer on the wall, "+ currentBottles +" bottle of beer.\n" +
-                "Take it down and pass it around, no more bottles of beer on the wall.\n" +
-                "\n";
-            }
-            else if (i == 0) {
-                song = "No more bottles of beer on the wall, no more bottles of beer.\n"  +
-                "Go to the store and buy some more, 99 bottles of beer on the wall.\n" +
-                "\n";
-            }
-            else{
-                song = currentBottles + " bottles of beer on the wall, " + currentBottles + " bottles of beer.\n" +
-                "Take one down and pass it around, " + (currentBottles - 1) + " bottles of beer on the wall.\n" + 
-                "\n";
-            }
-            
+            song = verse(currentBottles);
+           
             songs.add(song);
 
             bottles--;
